@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontSize: {
+            'normal': '16px',
+            'heading': '24px',
+            'small': '14px',
+          },
+          fontWeight: {
+            'thin': '500',
+            'bold': '800'
+          },
+          fontFamily: {
+            'figtree': ['Figtree', 'sans-serif']
+          },
+          extend: {
+            colors: {
+              'gray': 'hsl(0, 0%, 50%)',
+              'yellow': 'hsl(47, 88%, 63%)'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Blog preview card</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="bg-yellow">
+    <div role="maincontainer" class="h-screen flex items-center justify-center">
+      <div role="blogcard" class="w-96 h-auto rounded-lg bg-white">
+        <div role="imagecontainer" class="m-6 rounded-lg overflow-hidden">
+          <img
+            src="./assets/images/illustration-article.svg"
+            alt="course related image"
+          />
+        </div>
+        <div role="blogtag" class="w-min ml-6 mb-2">
+          <p class="px-4 py-1 bg-yellow rounded-lg font-figtree font-bold text-small">Learning</p>
+        </div>
+        <p class="ml-6 text-small font-figtree"> Published 21 Dec 2023 </p>
+        
+      </div>
+    </div>
+    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
+    the backbone of every website, defining structure, content, and
+    presentation. Greg Hooper
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.linkedin.com/in/abhishek-shubham-634101126/"
+        >Abhishek Abhishek</a
+      >.
+    </div>
+  </body>
+</html>
