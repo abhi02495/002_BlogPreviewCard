@@ -22,26 +22,29 @@
     <script>
       tailwind.config = {
         theme: {
+          screens:{
+            'sm': '640px'
+          },
           fontSize: {
-            'normal': '16px',
-            'heading': '24px',
-            'small': '14px',
+            normal: "16px",
+            heading: "24px",
+            small: "14px",
           },
           fontWeight: {
-            'thin': '500',
-            'bold': '800'
+            thin: "500",
+            bold: "800",
           },
           fontFamily: {
-            'figtree': ['Figtree', 'sans-serif']
+            figtree: ["Figtree", "sans-serif"],
           },
           extend: {
             colors: {
-              'gray': 'hsl(0, 0%, 50%)',
-              'yellow': 'hsl(47, 88%, 63%)'
-            }
-          }
-        }
-      }
+              gray: "hsl(0, 0%, 50%)",
+              yellow: "hsl(47, 88%, 63%)",
+            },
+          },
+        },
+      };
     </script>
     <title>Blog preview card</title>
 
@@ -57,30 +60,42 @@
   </head>
   <body class="bg-yellow">
     <div role="maincontainer" class="h-screen flex items-center justify-center">
-      <div role="blogcard" class="w-96 h-auto rounded-lg bg-white">
+      <!--check the dropshadow-->
+      <div role="blogcard" class="sm:w-96 w-[327px] h-auto rounded-[20px] bg-white border drop-shadow-[8px_8px_0_rgba(0,0,0,1)]">
         <div role="imagecontainer" class="m-6 rounded-lg overflow-hidden">
           <img
             src="./assets/images/illustration-article.svg"
             alt="course related image"
           />
         </div>
-        <div role="blogtag" class="w-min ml-6 mb-2">
-          <p class="px-4 py-1 bg-yellow rounded-lg font-figtree font-bold text-small">Learning</p>
+        <div role="blogtag" class="w-min ml-6 mb-3">
+          <p
+            class="px-4 py-1 bg-yellow rounded-md font-figtree font-bold text-small"
+          >
+            Learning
+          </p>
         </div>
-        <p class="ml-6 text-small font-figtree"> Published 21 Dec 2023 </p>
-        
+        <p class="ml-6 text-small font-figtree mb-3">Published 21 Dec 2023</p>
+        <!-- below example is of transition-->
+        <p class="ml-6 font-figtree font-bold text-heading mb-3 hover:text-yellow transition ease-in-out delay-150 cursor-pointer">
+          HTML & CSS foundations
+        </p>
+        <p class="ml-6 text-normal text-gray mb-6">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+        <div role="authorinfo" class="flex ml-6 items-center mb-6">
+          <img src="./assets/images/image-avatar.webp" alt="author picture" class="w-8 h-8"/>
+          <p class="px-4 text-small font-bold ">Greg Hooper</p>
+        </div>
       </div>
     </div>
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
-    the backbone of every website, defining structure, content, and
-    presentation. Greg Hooper
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by
-      <a href="https://www.linkedin.com/in/abhishek-shubham-634101126/"
+      <a href="https://www.linkedin.com/in/abhishek-shubham-634101126/" target="_blank"
         >Abhishek Abhishek</a
       >.
     </div>
